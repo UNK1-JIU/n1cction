@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><title>播不停</title><script>document.write('<script src="./config/index.js?t=' + new Date().getTime() + '"><\/script>');</script></head><body><div id=app></div></body><script>window.onload = async function () {
+    // 新式注入
+
+    await CefSharp.BindObjectAsync("boundAsync");
+
+
+    window.boundAsync = boundAsync
+
+    // 禁用页面上的右键菜单
+    document.addEventListener('contextmenu', function(e){
+      e.preventDefault();
+    }, false);
+
+  }</script></html>
